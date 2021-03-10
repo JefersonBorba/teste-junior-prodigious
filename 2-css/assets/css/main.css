@@ -1,1 +1,323 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+
+body{
+    background-color: #F4F4F4;
+    font-family: 'Source Sans Pro';
+}
+/* HEADER */
+#header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    width: 100%;
+    background-color: #FFF;
+}
+.links{
+    display: none;
+}
+.links div{
+    display: flex;
+    flex-direction: row;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.links_item{
+    color: #828282;
+    font-variant: small-caps;
+}
+.main_title{
+    margin: 20px;
+    /* width: 100%; */
+    color: #3C3B3B;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+.menu{
+    margin-right: 50px;
+}
+
+/* POST */
+.post{
+    background-color: #FFF;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.secondary_title{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3C3B3B;
+    font-variant: small-caps;
+}
+.title .paragraph{
+    color: #8E8E8E;
+    font-variant: small-caps;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    height: 250px;
+}
+.author img{
+    border-radius: 50%;
+}
+.meta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.meta a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+.meta .author{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.meta .author .name{
+    text-decoration: underline;
+    color: #3C3B3B;
+    margin-right: 10px;
+    font-variant: small-caps;
+}
+.published{
+    font-weight: bold;
+    color: #3C3B3B;
+    font-variant: small-caps;
+}
+.image img{
+    width: 100%;
+}
+.post .paragraph{
+    color: #3C3B3B;
+    /* max-width: 840px; */
+}
+.actions .button{
+    color: #3C3B3B;
+    font-variant: small-caps;
+    border: 1px solid #EEEEEE;
+    padding: 15px;
+    font-weight: bold;
+}
+.post .actions .button{
+    transition: color 0.3s, border 0.3s;
+}
+.post .actions .button:hover{
+    color: rgb(255, 102, 0);
+    background-color: rgb(229, 229, 226);
+    border: solid 1px gray;
+}
+.actions{
+    padding: 30px;
+}
+.pagination{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pagination .disabled{
+    color: #D5D5D5;
+}
+.pagination span{
+    margin-top: 40px;
+}
+/* SIDEBAR */
+
+.mini-post{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #FFF;
+    margin-top: 40px;
+    height: 300px;
+}
+.mini-post .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.mini-post .header div{
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.mini-post .header .published{
+    font-variant: small-caps;
+    font-weight: normal;
+}
+.mini-post .header .tertiary_title{
+    text-align: start;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: #3C3B3B;
+}
+
+/* POSTS LIST */
+.posts span div{
+    height: 100px;
+}
+.posts span > div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    border-bottom: 1px solid #EEEEEE;
+    padding: 25px 0;
+}
+.posts .header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+    text-align: start;
+}
+.posts span a img{
+    width: 100px;
+}
+.posts .tertiary_title{
+    color: #3C3B3B;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+.posts .published{
+    font-weight: normal;
+    color: #3C3B3B;
+    font-variant: small-caps;
+}
+
+/* ABOUT */
+
+.blurb{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.blurb .actions{
+    padding: 0; 
+}
+
+/*----------------TABLET--------------------*/
+
+@media only screen and (min-width: 600px) {
+    .post .header .meta{
+        align-items: flex-end;
+        margin-right: 50px;
+    }
+    .post .header .meta .author{
+        justify-content: flex-end;
+    }
+    .post .header{
+        width: 100%;
+        max-width: 840px;
+    }
+    .post .paragraph{
+        max-width: 840px;
+    }
+    .pagination{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .pagination .button{
+        margin: 10px;
+    }
+    .mini-posts{
+        columns: 2;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .mini-post{
+        display: inline-flex;
+        vertical-align: top;
+    }
+    .posts{
+        columns: 2;
+    }
+    .posts span div{
+        display: inline-flex;
+        vertical-align: top;
+    }
+}
+
+/* ---------------DESKTOP------------- */
+
+@media only screen and (min-width: 1200px) {
+    #wrapper{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin: 0 2%;
+    }
+    #header{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    #sidebar{
+        margin: 12px 10%;
+    }
+    .post .header{
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 840px;
+    }
+    .post{
+        padding: 5%;
+        margin-right: 5%;
+    }
+    .post .header .title{
+        text-align: start;
+    }
+    .post .paragraph{
+        max-width: 840px;
+    }
+    .post .header .meta{
+        margin: 0;
+    }
+    .post .header .author{
+        width: auto;
+    }
+    .post .header .meta{
+        width: auto;
+    }
+    .links{
+        display: contents;
+    }
+    .links .links_item{
+        padding: 0 10px;
+    }
+    .mini-post .header{
+        padding: 10px;
+    }
+    .mini-posts{
+        columns: 1;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .posts{
+        columns: 1;
+        width: 351px;
+    }
+    .blurb{
+        width: 351px;
+    }
+    .menu{
+        display: none;
+    }
+  }

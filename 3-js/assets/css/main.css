@@ -230,7 +230,7 @@ body.-overlay .wrapper:before {
   z-index: 20;
 }
 
-.modal-wiki-active {
+.modal-wiki.-active {
   opacity: 1;
   visibility: visible;
 }
